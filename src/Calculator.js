@@ -20,15 +20,20 @@ module.exports = async (options) => {
   }
 
   if (!options.embed.title) {
-    options.embed.title = "Calculator | Weky Development";
+    options.embed.title = "計算機";
   }
   if (typeof options.embed.title !== "string") {
     throw new TypeError("Djs-helper Error: embed title must be a string.");
   }
 
-  if (!options.embed.color) options.embed.color = functions.randomHexColor();
-  if (typeof options.embed.color !== "string") {
-    throw new TypeError("Djs-helper Error: embed color must be a string.");
+  if (!options.embed.color) options.embed.color = 0x92e6a7;
+  if (typeof options.embed.color !== "number") {
+    throw new TypeError("Djs-helper Error: embed color must be a number.");
+  }
+
+  if (!options.embed.disabledColor) options.embed.color = 0x808080;
+  if (typeof options.embed.disabledColor !== "number") {
+    throw new TypeError("Djs-helper Error: disabled color must be a number.");
   }
 
   if (!options.embed.footer) {
@@ -153,7 +158,7 @@ module.exports = async (options) => {
       async function lock() {
         const _embed = new Discord.EmbedBuilder()
           .setTitle(options.embed.title)
-          .setColor(options.embed.color)
+          .setColor(options.embed.disabledColor)
           .setDescription(stringify)
           .setFooter({
             text: options.embed.footer,
