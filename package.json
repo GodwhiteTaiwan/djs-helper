@@ -1,0 +1,41 @@
+{
+  "name": "@godwhite/djs-helper",
+  "version": "1.0.0",
+  "description": "A awesome discord.js v14 helper",
+  "main": "index.js",
+  "types": "typings/index.d.ts",
+  "scripts": {
+    "test": "nodemon test/test.js"
+  },
+  "keywords": [
+    "weky",
+    "discord-games"
+  ],
+  "homepage": "https://github.com/GodwhiteTaiwan/djs-helper#readme",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/GodwhiteTaiwan/djs-helper/issues"
+  },
+  "author": "Godwhite",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GodwhiteTaiwan/djs-helper.git"
+  },
+  "dependencies": {
+    "chalk": "^4.1.1",
+    "html-entities": "^2.3.2",
+    "mathjs": "^9.4.3",
+    "node-fetch": "^2.6.1",
+    "quick.db": "^7.1.3",
+    "string-width": "^2.1.1"
+  },
+  "devDependencies": {
+    "@weky/inlinereply": "^0.0.0",
+    "axios": "^0.21.1",
+    "cheerio": "^1.0.0-rc.10",
+    "nodemon": "^2.0.12"
+  },
+  "directories": {
+    "test": "test"
+  }
+}
